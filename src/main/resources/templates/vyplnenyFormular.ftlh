@@ -4,38 +4,38 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Registrace na letní dětský tábor</title>
+    <title>Potvrzeni registrace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
     <main>
-        <h1>Registrace na letní dětský tábor</h1>
+        <h1>Potvrzeni registrace</h1>
 
         <form class="dite" action="/formular" method="post">
                 <label for="jmeno" class="radek">Jméno:</label>
-                [@spring.formInput path="form.jmeno" /]
+                [@spring.formInput attributes='readonly="true"' path="form.jmeno" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="prijmeni" class="radek">Prijmeni:</label>
-                [@spring.formInput path="form.prijmeni" /]
+                [@spring.formInput attributes='readonly="true"' path="form.prijmeni" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="datumNarozeni" class="radek">Datum narozeni:</label>
-                [@spring.formInput path="form.datumNarozeni" fieldType="date" /]
+                [@spring.formInput attributes='readonly="true"' path="form.datumNarozeni" fieldType="date" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="pohlavi" class="radek">Pohlavi:</label>
-                [@spring.formSingleSelect path="form.pohlavi" options={
+                [@spring.formSingleSelect attributes='readonly="true"' path="form.pohlavi" options={
                     "": "",
                     "1": "chlapec",
                     "2": "divka"
                 } /]
-                <div class="error">[@spring.showErrors "<br>"/]</div>
+                div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="turnus" class="radek">Turnus:</label>
-                [@spring.formSingleSelect path="form.turnus" options={
+                [@spring.formSingleSelect attributes='readonly="true"' path="form.turnus" options={
                     "": "",
                     "1": "1. - 10. cervence",
                     "2": "11. - 20. cervence",
@@ -47,16 +47,13 @@
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="email" class="radek">E-mail na rodice:</label>
-                [@spring.formInput path="form.email" fieldType="email" /]
+                [@spring.formInput attributes='readonly="true"' path="form.email" fieldType="email" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="email" class="radek">Telefon na rodice:</label>
-                [@spring.formInput path="form.telefon" fieldType="telefon" /]
+                [@spring.formInput attributes='readonly="true"' path="form.telefon" fieldType="telefon" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
-                <div class="radek controls">
-                    <button type="submit">Registrovat</button>
-                </div>
             </form>
     </main>
 </body>
