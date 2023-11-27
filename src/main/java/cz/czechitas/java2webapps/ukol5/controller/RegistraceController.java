@@ -32,11 +32,11 @@ public class RegistraceController {
         if (bindingResult.hasErrors()) {
             return "/formular";
         }
-        Period period = form.getDatumNarozeni().until(LocalDate.now());
+        Period period = LocalDate.parse(form.getDatumNarozeni()).until(LocalDate.now());
         int vek = period.getYears();
 
         if (vek < 9 || vek > 15) {
-            bindingResult.addError(new FieldError("form", "datumNarozeni", "Vek je mimo limit"));
+            bindingResult.addError(new FieldError("form", "datumNarozeni", "Vek ditete musi byt v rozmezi 9 - 15 let"));
             return "/formular";
         }
 

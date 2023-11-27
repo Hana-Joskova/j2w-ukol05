@@ -9,11 +9,13 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="/css/style.css" />
 </head>
+
 <body>
     <main>
         <h1>Potvrzeni registrace</h1>
 
         <form class="dite" action="/formular" method="post">
+
                 <label for="jmeno" class="radek">Jméno:</label>
                 [@spring.formInput attributes='readonly="true"' path="form.jmeno" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
@@ -27,15 +29,15 @@
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="pohlavi" class="radek">Pohlavi:</label>
-                [@spring.formSingleSelect attributes='readonly="true"' path="form.pohlavi" options={
+                [@spring.formSingleSelect attributes='disabled' path="form.pohlavi" options={
                     "": "",
                     "1": "chlapec",
                     "2": "divka"
                 } /]
-                div class="error">[@spring.showErrors "<br>"/]</div>
+                <div class="error">[@spring.showErrors "<br>"/]</div>
 
                 <label for="turnus" class="radek">Turnus:</label>
-                [@spring.formSingleSelect attributes='readonly="true"' path="form.turnus" options={
+                [@spring.formSingleSelect attributes='disabled' path="form.turnus" options={
                     "": "",
                     "1": "1. - 10. cervence",
                     "2": "11. - 20. cervence",
@@ -54,9 +56,10 @@
                 [@spring.formInput attributes='readonly="true"' path="form.telefon" fieldType="telefon" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
 
-            </form>
+        </form>
     </main>
 </body>
+
 </html>
 
 

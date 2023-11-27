@@ -14,6 +14,7 @@
         <h1>Registrace na letní dětský tábor</h1>
 
         <form class="dite" action="/formular" method="post">
+
                 <label for="jmeno" class="radek">Jméno:</label>
                 [@spring.formInput path="form.jmeno" /]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
@@ -57,7 +58,7 @@
                 <div class="radek controls">
                     <button type="submit">Registrovat</button>
                 </div>
-            </form>
+        </form>
     </main>
 </body>
 </html>

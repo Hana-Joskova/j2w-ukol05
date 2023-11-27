@@ -23,7 +23,7 @@ public final class RegistraceForm {
     private  String prijmeni;
 
     @NotNull
-    private  LocalDate datumNarozeni;
+    private  String datumNarozeni;
 
     @NotNull
     @NotEmpty
@@ -35,7 +35,7 @@ public final class RegistraceForm {
                           Long vek,
                           String jmeno,
                           String prijmeni,
-                          LocalDate datumNarozeni,
+                          String datumNarozeni,
                           String turnus,
                           String email,
                           String telefon
@@ -78,7 +78,7 @@ public final class RegistraceForm {
         this.prijmeni = prijmeni;
     }
 
-    public void setDatumNarozeni(LocalDate datumNarozeni) {
+    public void setDatumNarozeni(String datumNarozeni) {
         this.datumNarozeni = datumNarozeni;
     }
 
@@ -110,7 +110,7 @@ public final class RegistraceForm {
         return prijmeni;
     }
 
-    public LocalDate getDatumNarozeni() {
+    public String getDatumNarozeni() {
         return datumNarozeni;
     }
 
